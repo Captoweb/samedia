@@ -1,0 +1,47 @@
+<?php
+
+require_once 'Database.php';
+
+// методы работы с БД
+// получение (SELECT) по названию таблицы и условию
+// $users = Database::getInstance()->get('users', ['name', '=', 'Admin 1']); 
+
+// удаление (DELET) по названию таблицы и условию
+// $users = Database::getInstance()->get('users', ['name', '=', 'User1']); 
+
+// вставка (INSERT)
+// Database::getInstance()->insert('users', [
+//     'name' => 'User11',
+//     'password' => 'password_11',
+//     'email' => 'user11@mail.ru',
+// ]); 
+
+// обновление (UPDATE) по id (только)
+// $id = 4;
+// Database::getInstance()->update('users', $id, [
+//     'name' => 'User111',
+//     'password' => 'password_111',
+//     'email' => 'user111@mail.ru',
+// ]); 
+
+// получение одного элемента из таблицы
+$users = Database::getInstance()->get('users', ['name', '=', 'User111']); 
+echo $users->first()->name; // первый элемент из ячейки name с именем User111
+
+
+// echo $users->results(); // выведет массив всех пользователей
+
+
+
+// if($users->error()) {
+//     echo 'we have error';
+// } else {
+//     foreach ($users->results() as $user) { 
+//         echo $user->name . '<br>';
+//     }
+// }
+
+
+// if($users->count()) {
+    
+// }

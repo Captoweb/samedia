@@ -1,0 +1,22 @@
+body {
+    background-color: #ddd;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.validate {
+	padding: 12px 30px;
+	background-color: #f8d7da;
+	color: #721c24;
+	border-radius: 4px;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+thead, tbody, tfoot, tr, td, th {
+    border-color: #777;
+}
